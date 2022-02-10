@@ -1,0 +1,22 @@
+input,
+textarea {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 1rem;
+  border: unset;
+  display: block;
+  &,
+  &::placeholder {
+    font-size: 1rem;
+  }
+
+  &::placeholder {
+    color: rgba(27, 25, 24, 0.18);
+  }
+
+  outline: unset !important;
+}
+
+textarea {
+  resize: vertical;
+}

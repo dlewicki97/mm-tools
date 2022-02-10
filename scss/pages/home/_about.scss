@@ -1,0 +1,30 @@
+.about {
+  position: relative;
+
+  &-drill {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    height: 1300px;
+    transform: translateY(-5rem);
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  &-bg {
+    @include padding-container-x;
+    @include padding-container-y;
+  }
+  h2,
+  &-description p {
+    color: white;
+  }
+
+  &-description {
+    @media (min-width: 992px) {
+      width: 50%;
+    }
+  }
+}

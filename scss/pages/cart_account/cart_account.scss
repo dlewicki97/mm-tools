@@ -1,0 +1,6 @@
+@import "../../layout/layout";
+
+main {
+  @include padding_container_x;
+  @include padding_container_y;
+}

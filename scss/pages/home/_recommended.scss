@@ -1,0 +1,30 @@
+.recommended {
+  @include padding-container-x;
+  @include padding-container-y;
+  &-banner {
+    padding: 2rem 2rem;
+  }
+  &-logo {
+    height: 100px;
+    @media (max-width: 400px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    @media (min-width: 768px) {
+      width: 25%;
+    }
+    a {
+      color: white;
+      display: block;
+      filter: drop-shadow(2px 2px 5px #00000085);
+      &:hover {
+        color: $first;
+      }
+    }
+  }
+}

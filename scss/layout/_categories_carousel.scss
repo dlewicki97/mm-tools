@@ -1,0 +1,33 @@
+.categories-carousel {
+  background-color: #f4f4f4;
+  padding: 2rem 4rem;
+  .category {
+    display: flex;
+    justify-content: center;
+    &-wrapper {
+      &:hover {
+        .category-icon path {
+          fill: $first;
+        }
+        .category-name {
+          color: $first;
+        }
+      }
+    }
+    &-icon {
+      height: 45px;
+      width: auto;
+      margin: auto;
+      display: block;
+      path {
+        transition: fill 0.2s;
+      }
+    }
+    &-name {
+      text-align: center;
+      transition: color 0.2s;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+}

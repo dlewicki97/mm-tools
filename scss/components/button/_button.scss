@@ -1,0 +1,28 @@
+.button {
+  background-color: $first;
+  border-radius: 10px;
+  padding: 0.8rem 0.9rem;
+  transition: background-color 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  font-size: 1rem;
+  border: unset;
+  cursor: pointer;
+  img {
+    height: 17px;
+  }
+
+  &,
+  span {
+    color: white !important;
+  }
+
+  &.secondary {
+    background-color: #646464;
+  }
+  &:hover {
+    background-color: $second;
+  }
+}

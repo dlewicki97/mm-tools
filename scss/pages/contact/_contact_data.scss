@@ -1,0 +1,62 @@
+&-data {
+  @media (min-width: 992px) {
+    padding-left: 9rem;
+  }
+  @media (max-width: 992px) {
+    margin-top: 5rem;
+  }
+
+  &-col {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    @media (max-width: 576px) {
+      margin-top: 5rem;
+      flex-direction: column;
+      .contact-data-content {
+        padding-left: 0;
+        margin-top: 1rem;
+      }
+      .contact-data-label {
+        text-align: center;
+      }
+    }
+  }
+
+  &-icon-container {
+    display: block;
+    border-radius: 100%;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    $dim: 100px;
+    width: $dim;
+    height: $dim;
+    transition: background-color 0.2s;
+    &:hover {
+      background-color: $first;
+      .contact-data-icon {
+        filter: brightness(120);
+      }
+    }
+  }
+
+  &-icon {
+    height: 35px;
+  }
+
+  &-content {
+    padding-left: 1.5rem;
+  }
+
+  &-label {
+    font-weight: 700;
+    letter-spacing: 1.9px;
+    font-size: 0.7rem;
+  }
+  &-value {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+}

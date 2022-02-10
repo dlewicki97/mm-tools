@@ -1,0 +1,120 @@
+.listing {
+  display: flex;
+  flex-wrap: wrap;
+  $categoriesWidth: 18%;
+  // padding-bottom: 8rem;
+
+  &-categories {
+    &-container {
+      width: $categoriesWidth;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+  &-subcategories {
+    list-style-type: none;
+    padding-left: 1rem;
+    margin-top: 0rem;
+    .listing-category-title {
+      font-weight: 300;
+    }
+  }
+  &-subcategory {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    &:not(.active) {
+      .listing-subcategories {
+        display: none;
+      }
+    }
+    &.active,
+    &:hover {
+      .listing-subcategory-wrapper .listing-category-title a {
+        color: $first;
+      }
+      .listing-category-arrow {
+        path {
+          fill: $first;
+        }
+      }
+    }
+    &.active {
+      .listing-category-arrow {
+        transform: rotate(180deg);
+      }
+    }
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
+  }
+  &-category:not(.active) > &-subcategories {
+    display: none;
+  }
+  &-category {
+    width: fit-content;
+    user-select: none;
+    margin-bottom: 1rem;
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    &-wrapper + .listing-subcategories {
+      padding-left: 0;
+    }
+    path {
+      transition: fill 0.2s;
+    }
+    &.active &-wrapper {
+      .listing-category-arrow {
+        transform: rotate(180deg);
+      }
+    }
+    &.active &-wrapper,
+    &:hover &-wrapper {
+      .listing-category-icon,
+      .listing-category-arrow {
+        path {
+          fill: $first;
+        }
+      }
+      .listing-category-title {
+        color: $first;
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
+    &-icon {
+      height: 30px;
+      width: fit-content;
+      margin-right: 0.5rem;
+    }
+    &-title {
+      font-size: 1rem;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+    &-arrow {
+      height: 20px;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      width: auto;
+      transition: transform 0.2s;
+    }
+  }
+
+  @import "listing_products";
+  .listing-products {
+    width: 100% - $categoriesWidth;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+}

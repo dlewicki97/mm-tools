@@ -1,0 +1,22 @@
+@import "../../layout/layout";
+@import "listing";
+@import "../../components/custom_select/custom_select";
+@import "../../components/breadcrumb/breadcrumb";
+
+@include bg;
+
+.breadcrumb {
+  margin-bottom: 2rem;
+}
+
+main {
+  padding: 5rem;
+  @media (max-width: 992px) {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+  @media (max-width: 576px) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}

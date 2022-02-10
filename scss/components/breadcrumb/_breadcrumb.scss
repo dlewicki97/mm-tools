@@ -1,0 +1,15 @@
+.breadcrumb {
+  width: 100%;
+  a {
+    color: #c4c4c4;
+    font-weight: 300;
+    font-size: 1rem;
+    &:hover {
+      color: $first;
+    }
+  }
+
+  img {
+    height: 11px;
+  }
+}

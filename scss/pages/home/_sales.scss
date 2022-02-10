@@ -1,0 +1,6 @@
+@import "../../components/products/products";
+
+.sales {
+  @include padding-container-x;
+  @include padding-container-y;
+}

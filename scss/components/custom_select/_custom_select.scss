@@ -1,0 +1,86 @@
+.custom-select {
+  background-color: #646464;
+  width: fit-content;
+  position: relative;
+  $borderRadius: 10px;
+  border-radius: $borderRadius;
+  display: flex;
+  align-items: center;
+  padding: 0 0.9rem;
+  transition: background-color 0.2s;
+  height: 48px;
+  cursor: pointer;
+
+  &.active &-option:hover {
+    background-color: #646464;
+  }
+  &.active {
+    background-color: $second;
+  }
+
+  &.active &-options {
+    pointer-events: unset;
+    background-color: $second;
+    padding-bottom: 1rem;
+    .custom-select-option {
+      opacity: 1;
+      transition: opacity 0.2s, background-color 0.2s;
+    }
+  }
+  &.active &-arrow {
+    transform: rotate(180deg);
+  }
+  &-placeholder {
+    color: white;
+    &-section {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &-arrow {
+    margin-left: 0.5rem;
+    transition: transform 0.2s;
+  }
+  &-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 1rem;
+    transform: translateY(-1rem);
+    background-color: #646464;
+    transition: height 0.2s, opacity 0.5s, background-color 0.2s;
+    opacity: 1;
+    pointer-events: none;
+    border-bottom-left-radius: $borderRadius;
+    border-bottom-right-radius: $borderRadius;
+    user-select: none;
+    z-index: 1;
+  }
+  &-option {
+    color: white;
+    transition: background-color 0.2s, opacity 0s;
+    padding: 0 0.9rem;
+    font-size: 0.9rem;
+    opacity: 0;
+  }
+
+  &.gray {
+    &.active .custom-select-option:hover {
+      color: white;
+    }
+    &,
+    .custom-select-options {
+      background-color: #f4f4f4;
+    }
+    .custom-select-placeholder,
+    .custom-select-option {
+      color: black;
+    }
+    .custom-select-arrow {
+      filter: invert(1);
+    }
+  }
+}

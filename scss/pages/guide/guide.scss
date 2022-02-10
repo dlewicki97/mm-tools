@@ -1,0 +1,54 @@
+@import "../../layout/layout";
+@import "../../components/breadcrumb/breadcrumb";
+@import "../../components/banner/banner";
+@import "../../components/dots_heading/dots_heading";
+@import "../../components/products/products";
+@include bg;
+
+main {
+  @include padding_container_x;
+  @include padding_container_y;
+}
+
+.guide {
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 4rem;
+    @media (max-width: 992px) {
+      .guide-photo-container {
+        order: -1;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  &-description {
+    @media (min-width: 992px) {
+      padding-right: 3rem;
+    }
+  }
+  &-col {
+    width: 50%;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+  &-photo {
+    border-radius: 10px;
+    @media (max-width: 992px) {
+      height: 300px;
+    }
+  }
+  &-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 6rem;
+    .button:not(.secondary) {
+      margin-right: 0.5rem;
+    }
+    a {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

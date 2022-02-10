@@ -1,0 +1,58 @@
+@import "../../layout/layout";
+@import "../../components/breadcrumb/breadcrumb";
+@import "../../components/banner/banner";
+
+@include bg;
+
+.consultancy {
+  @include padding_container_x;
+  @include padding_container_y;
+
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+    @media (min-width: 992px) {
+      &:not(.even) {
+        .consultancy-content {
+          padding-left: 3rem;
+        }
+      }
+      &.even {
+        .consultancy-photo-container {
+          order: 2;
+        }
+        .consultancy-content {
+          order: 1;
+          padding-right: 3rem;
+        }
+      }
+    }
+  }
+
+  &-photo-container,
+  &-content {
+    width: 50%;
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+  &-photo {
+    border-radius: 10px;
+    @media (max-width: 992px) {
+      height: 300px;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    .button:not(.secondary) {
+      margin-right: 0.5rem;
+    }
+  }
+}

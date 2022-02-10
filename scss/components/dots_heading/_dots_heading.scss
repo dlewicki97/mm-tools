@@ -1,0 +1,32 @@
+.dots-heading {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  background-color: #efefef;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d9d6d696;
+  h2 {
+    margin-bottom: 0;
+    @media (min-width: 768px) {
+      white-space: nowrap;
+      padding-right: 1.5rem;
+    }
+  }
+  .dots {
+    background-image: linear-gradient(
+      to right,
+      $first 27%,
+      rgba(255, 255, 255, 0) 0%
+    );
+    display: none;
+    background-position: center;
+    background-size: 11px 4px;
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 12px;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}

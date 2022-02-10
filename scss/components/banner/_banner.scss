@@ -1,0 +1,29 @@
+.banner {
+  @include padding_container_x;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #ebebeb;
+  position: relative;
+  &-title {
+    color: $first;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+  }
+  &-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #1b1818 0%, rgba(27, 25, 24, 0) 100%);
+    z-index: 1;
+  }
+  &.bg {
+    height: 350px;
+  }
+  .breadcrumb {
+    position: relative;
+    z-index: 2;
+  }
+}

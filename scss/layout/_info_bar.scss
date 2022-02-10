@@ -1,0 +1,35 @@
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  $padding: 1.2rem 1.5rem;
+  background-color: $first;
+  $breakpoint: 576px;
+  font-size: 13px;
+  @media (max-width: $breakpoint) {
+    flex-direction: column;
+  }
+  &-info,
+  &-contact {
+    padding: $padding;
+    font-size: inherit;
+    @media (max-width: $breakpoint) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &,
+    span {
+      color: white !important;
+    }
+    letter-spacing: 1.5px;
+  }
+  &-contact {
+    background-color: $second;
+    @media (min-width: $breakpoint) {
+      padding-left: 3rem;
+    }
+    a {
+      color: white;
+    }
+  }
+}
